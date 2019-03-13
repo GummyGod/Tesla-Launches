@@ -23,7 +23,6 @@ const LAUNCH_QUERY = gql`
 
 export class Launch extends Component {
     render() {
-        console.log(this.props)
         let { flight_number } = this.props.match.params
         flight_number = parseInt(flight_number);
         return (
@@ -80,6 +79,8 @@ export class Launch extends Component {
                                             Rocket Type: {rocket_type}
                                         </li>
                                     </ul>
+                                    <hr />
+                                    <Link to ="/" className="btn btn-secondary"> Back </Link>
 
                                 </div>
                             );
